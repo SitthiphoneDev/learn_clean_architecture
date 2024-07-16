@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'core/router/app_router.dart';
+
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -9,13 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SizedBox.shrink(),
     );
   }
 }
